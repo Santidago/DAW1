@@ -7,7 +7,7 @@ public class Kaprekar {
   public static void main(String[] args) {
       int cant, remv, resta, suma, kar,iteraciones=0;
       char cremv;
-      int[] kap = {1, 1, 1, 1};
+      int[] kap = {0, 0, 0, 0};
       int[] neg = {0, 0, 0, 0};
       Scanner lector = new Scanner(System.in);
       System.out.println("Introdusca un numero de 4 digitos");
