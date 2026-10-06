@@ -21,8 +21,9 @@ public class Kaprekar {
           System.out.println("El numero es muy grande");
       }
       else if (kap[0] == kap[1] && kap[0] == kap[2] && kap[0] == kap[3]) {
-          System.out.println("No es un numero valido");
-      } else {
+         System.out.println("No es un numero valido");
+      }
+      else {
           do {
               Arrays.sort(kap);
               for (cant = 0; cant < 4; cant++) {
