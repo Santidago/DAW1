@@ -14,41 +14,38 @@ public class Piscinas {
         vpisc = lector.nextInt();
         vval = lector.nextInt();
         vper = lector.nextInt();
-        do {
-            lleno=lleno+nval-nper;
-            nviajes++;
-            if (lleno<0)
-            {
-                nviajes=1000000000;
-                break;
+        if (npisc<110&&npisc>0&&nval<110&&nval>0&&vpisc<110&&vpisc>0&&vval<110&&vval>0) {
+            do {
+                lleno = lleno + nval - nper;
+                nviajes++;
+                if (lleno < 0) {
+                    nviajes = 1000000000;
+                    break;
+                }
+            } while (npisc > lleno);
+            lleno = 0;
+            do {
+                lleno = lleno + vval - vper;
+                vviajes++;
+                if (lleno < 0) {
+                    vviajes = 1000000000;
+                    break;
+                }
+            } while (vpisc > lleno);
+            if (nviajes > vviajes) {
+                ganador = -1;
+                System.out.println(ganador);
+            } else if (nviajes < vviajes) {
+                ganador = 1;
+                System.out.println(ganador);
+            } else {
+                ganador = 0;
+                System.out.println(ganador);
             }
-        }while (npisc>lleno);
-        lleno=0;
-        do {
-            lleno=lleno+vval-vper;
-            vviajes++;
-            if (lleno<0)
-            {
-                vviajes=1000000000;
-                break;
-            }
-        }while (vpisc>lleno);
-        if (nviajes>vviajes)
+        }else
         {
-            ganador=-1;
-            System.out.println(ganador);
+            System.out.println("Piscina o valde de tamaño muy grande o no existente");
         }
-        else if (nviajes<vviajes)
-        {
-            ganador=1;
-            System.out.println(ganador);
-        }
-        else
-        {
-            ganador=0;
-            System.out.println(ganador);
-        }
-
 
     }
 }
