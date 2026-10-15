@@ -6,11 +6,11 @@ public class Parentesis {
     public static void main(String[] args) {
         int largo,error=0;
         char check;
-        ArrayList<Character> com = new ArrayList<Character>();//, end = new ArrayList<Character>();
+        ArrayList<Character> com = new ArrayList<>();//, end = new ArrayList<Character>();
         Scanner lector = new Scanner(System.in);
         System.out.println("Inserte una oracion");
             String ora = lector.nextLine();
-            largo = ora.length() - 1;
+            largo = ora.length();
             for (int i = 0; i < largo; i++) {
                 check = ora.charAt(i);
                 if (check == '[') {
