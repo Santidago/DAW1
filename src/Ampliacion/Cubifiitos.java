@@ -22,7 +22,7 @@ public class Cubifiitos {
                 break;
             }
             set.add(cubo);
-            Infi = "0"+cubo;
+            Infi = String.valueOf(cubo);
 
         }while(cubo!=1);
         if (cubo==1)
