@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Parentesis {
     public static void main(String[] args) {
-        int largo,error=0;
+        int error=0;
         char check;
         ArrayList<Character> com = new ArrayList<>();//, end = new ArrayList<Character>();
+        com.add('D');
         Scanner lector = new Scanner(System.in);
         System.out.println("Inserte una oracion");
             String ora = lector.nextLine();
-            largo = ora.length();
-            for (int i = 0; i < largo; i++) {
+            for (int i = 0; i < ora.length(); i++) {
                 check = ora.charAt(i);
                 if (check == '[') {
                     com.add(check);
@@ -48,6 +48,7 @@ public class Parentesis {
                     }
                 }
             }
+        com.removeFirst();
         if (error!=0)
         {
             System.out.println("No esta bien balanceada");
